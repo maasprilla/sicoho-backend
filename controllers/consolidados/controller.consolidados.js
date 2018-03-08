@@ -26,6 +26,7 @@ function dirExist(dir) {
 }
 
 function createFile(dir) {
+    console.log('creando archivo');
     createIfNotExist(dir + 'model.consolidado.js', `
         var db = require ('../../dbserver');
 
