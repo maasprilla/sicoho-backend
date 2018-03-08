@@ -46,11 +46,11 @@ function createFile(dir) {
     });
     consolidado.save(function (err) {
         if (err) {
-            res.jso
-        } n({
-            success: true,
-            message: 'Error al Registar Usuario'
-        });
+            res.json({
+                success: true,
+                message: 'Error al Registar Usuario'
+            });
+        }
     });
 
 
