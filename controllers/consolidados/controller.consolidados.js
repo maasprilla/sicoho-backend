@@ -4,12 +4,12 @@ var createIfNotExist = require("create-if-not-exist");
 var Consolidado = require('../../models/consolidados/model.adminconsolidados');
 
 module.exports.index = function (req, res) {
-    if (!dirExist(dir)){
-	console.log('no existe dir');
+    if (!dirExist(dir)) {
+        console.log('no existe dir');
         filessystem.mkdirSync('./models/consolidados/');
-	console.log('creo carpeta');
-	if(dirExist(dir)){
-		createIfNotExist(dir+'model.consolidado.js',`
+        console.log('creo carpeta');
+        if (dirExist(dir)) {
+            createIfNotExist(dir + 'model.consolidado.js', `
 			var db = require ('../../dbserver');
 
 			var BusinessCategories = db.mongoose.Schema({
@@ -20,34 +20,35 @@ module.exports.index = function (req, res) {
 
 			module.exports = BusinessCategory;
 
-		`);		
+        `);
 
-		   var consolidado = new Consolidado({
-            nombre:"miguel",
-	    ruta:"angel"
-        });
-        consolidado.save(function (err) {
-        if (err) {
-            res.jso}n({
-                success: true,
-                message: 'Error al Registar Usuario'
+
+            var consolidado = new Consolidado({
+                nombre: "miguel",
+                ruta: "angel"
             });
-        }
+            consolidado.save(function (err) {
+                if (err) {
+                    res.jso
+                } n({
+                    success: true,
+                    message: 'Error al Registar Usuario'
+                });
+            });
 
-	}
-    }else
-    {
+
+        }
+    } else {
         console.log("Directory already exist");
     }
     res.send('dentro del rest');
 }
 
 
-function dirExist(dir){
-if (filessystem.existsSync(dir)){
+function dirExist(dir) {
+    if (filessystem.existsSync(dir)) {
         return true;
-    }else
-    {
+    } else {
         return false;
     }
 }
