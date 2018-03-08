@@ -14,7 +14,7 @@ routes(app);
 
 var port = process.env.PORT || 8091;        // set our port
 
-db.mongodb.then(
+db.Mongoose.then(
 	() => {
 		console.log('bien');
 		var server = app.listen(port, function () {

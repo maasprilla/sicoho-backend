@@ -1,16 +1,16 @@
 var db = require('../../dbserver');
 
-var Schema = db.Mongoose.Schema,
+var Schema = db.mongoose.Schema,
   ObjectId = Schema.ObjectId;
 
 
 
-var Consolidados = db.Mongoose.Schema({
+var Consolidados = db.mongoose.Schema({
   _consolidadoId: Schema.Types.ObjectId,
   nombre: String,
   ruta: String
 });
-var Consolidado = db.Mongoose.model('Consolidados');
+var Consolidado = db.mongoose.model('Consolidados',Consolidados);
 
 
 module.exports = Consolidado;

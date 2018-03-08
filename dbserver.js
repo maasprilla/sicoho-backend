@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 
 
 var db = {
-    Mongoose:mongoose,
-    mongoose: mongoose.connect('mongodb://localhost/test')
+    mongoose:mongoose,
+    Mongoose: mongoose.connect('mongodb://localhost/test')
 };
 
 
