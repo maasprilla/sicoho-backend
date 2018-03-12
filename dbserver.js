@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 var db = {
     mongoose:mongoose,
-    Mongoose: mongoose.connect('mongodb://localhost/test')
+    Mongoose: mongoose.connect('mongodb://localhost/sicohodb')
 };
 
 

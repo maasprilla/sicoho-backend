@@ -1,6 +1,8 @@
 var filessystem = require('fs');
 var dir = './models/consolidados/';
 var createIfNotExist = require("create-if-not-exist");
+var 
+
 var Consolidado = require('../../models/consolidados/model.adminconsolidados');
 
 module.exports.index = function (req, res) {
@@ -43,17 +45,21 @@ function createFile(dir) {
 
     var consolidado = new Consolidado({
         nombre: "miguel",
-        ruta: "angel"
+        ruta: "./models/consolidados/model.consolidado"
     });
     consolidado.save(function (err) {
         if (err) {
             res.json({
                 success: true,
-                message: 'Error al Registar Usuario'
+                message: 'Error al Registar Consolidado'
             });
         }
     });
 
 
+}
+
+module.exports.show = function (req, res) {
+    
 }
 
