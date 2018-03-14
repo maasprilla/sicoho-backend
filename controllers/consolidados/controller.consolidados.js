@@ -1,8 +1,6 @@
 var filessystem = require('fs');
 var dir = './models/consolidados/';
 var createIfNotExist = require("create-if-not-exist");
-var 
-
 var Consolidado = require('../../models/consolidados/model.adminconsolidados');
 
 module.exports.index = function (req, res) {
@@ -60,6 +58,17 @@ function createFile(dir) {
 }
 
 module.exports.show = function (req, res) {
-    
+    console.log('consulta  api');
+
+    Consolidado.find(function (err, consolidado) {
+        if (err) {
+        // Note that this error doesn't mean nothing was found,
+        // it means the database had an error while searching, hence the 500 status
+            res.status(500).send(err)
+        } 
+        console.log(consolidado);
+         
+        res.send(consolidado);
+    });
 }
 
