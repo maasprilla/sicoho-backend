@@ -43,7 +43,7 @@ function createFile(dir) {
 
     var consolidado = new Consolidado({
         nombre: "miguel",
-        ruta: "./models/consolidados/model.consolidado"
+        ruta: "../../models/consolidados/model.consolidado"
     });
     consolidado.save(function (err) {
         if (err) {
