@@ -5,7 +5,7 @@ var controller = require('../../../controllers/consolidados/controller.consolida
 console.log('api');
 var router = express.Router();
 router.post('/', controller.index);
-router.get('/tabla/:id', controller.show);
+router.get('/tabla/:nombre', controller.show);
 //router.get('/iduser/:iduser', controller.findByUser);
 //router.post('/', controller.create);
 //router.put('/picture/:id', controller.updatePicture);

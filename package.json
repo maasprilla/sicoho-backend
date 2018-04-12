@@ -11,6 +11,8 @@
   "dependencies": {
     "create-if-not-exist": "0.0.2",
     "express": "^4.16.2",
+    "expressjs-route-mapper": "0.0.11",
+    "inject-code": "^1.0.0",
     "mongoose": "^5.0.4"
   }
 }
